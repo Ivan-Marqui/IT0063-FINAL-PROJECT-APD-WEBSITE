@@ -1,0 +1,1008 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>APD - Join Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="icon" type="image/png" href="images/APD.png">
+  </head>
+  <style>
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: rgb(18, 18, 18);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-image: url(images/background.jfif); 
+    background-size:cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    overflow-y: auto;
+}
+.navbar {
+    padding: 0; 
+    margin: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    animation: slideDown 0.8s ease-out;
+    background-color: black;
+    height: 100px;
+    line-height: 50px; 
+}
+.navbar-brand {
+    padding: 0; 
+    margin: 0;
+}
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.brand-container {
+    display: flex; 
+    align-items: center;
+    gap: 15px; 
+}
+.logo {
+    width: 80px;
+    height: 70px;
+}
+.brand-text {
+    color: goldenrod !important; 
+    cursor: default;
+    font-size: 15px;
+    font-weight: bold;
+    font-family:'Orbitron', sans-serif;
+    font-style: italic;
+    text-transform: uppercase; 
+    white-space: nowrap; 
+}
+.nav-link {
+    background-color: black;
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 10px 15px;
+    text-transform: uppercase;
+}
+.nav-link:hover {
+    background-color: goldenrod;
+    border-radius: 5px;
+    color: black;
+}
+.container-fluid {
+    background-color: black;
+    padding: 15px 10px;
+}
+ul.nav {
+    margin: 0;
+    padding: 0;
+}
+.navbar-toggler {
+    border: none;
+    outline: none;
+}
+@media (max-width: 991px) {
+    .navbar {
+        padding: 0; 
+    }
+    .navbar .container-fluid {
+        flex-wrap: nowrap;
+        padding: 25px 20px;
+    }
+    .navbar-brand {
+        flex-grow: 1;
+        max-width: 85%; 
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .brand-text {
+        font-size: 9px; 
+    }
+    .logo {
+    width: 50px; 
+    height: 40px;
+    padding-right: 0;
+    margin-right: 0;
+}
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: black;
+        text-align: left;
+        padding: 10px 0;
+        border-top: 1px solid goldenrod;
+    }
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+    }
+
+    .nav-item {
+        padding: 10px 0;
+    }
+
+    .nav-link {
+        width: 100%;
+        text-align: left;
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+}
+.heading1{
+    font-size: 30px;
+    color: goldenrod;
+    text-align: center;
+    margin-top: 180px;
+    font-weight: bold;
+    transform: scale(0.8);  
+    opacity: 0;  
+    animation: scaleup 0.8s ease-out forwards;
+}
+.heading2{
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    margin-top: 5px;
+    transform: scale(0.8);  
+    opacity: 0;  
+    animation: scaleup 0.8s ease-out forwards;
+}
+.member-card {
+    transform: scale(0.8);  
+    opacity: 0;  
+    animation: scaleup 0.8s ease-out forwards;
+}
+@keyframes scaleup {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.officer-card {
+    transform: scale(0.8);  
+    opacity: 0;  
+    animation: scaleUp 0.8s ease-out forwards;
+}
+@keyframes scaleUp {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.card-container {
+    display: flex;
+    gap: 30px; 
+    justify-content: center; 
+    align-items: center; 
+    overflow: visible;
+}
+.member-card {
+    margin-top: 50px;
+    width: 400px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 1s ease-in-out, box-shadow 1s ease-in-out !important;
+    cursor: pointer;
+    overflow: hidden;
+    color: white;
+}
+.member-card:hover {
+    transform: scale(1.05) !important;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+.member-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: goldenrod;
+    font-weight: bolder;
+}
+.member-card p {
+    font-size: 14px;
+    color: white;
+    padding: 0 15px;
+}
+.member-card button{
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: goldenrod;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+}
+.member-card button:hover {
+    background: transparent;
+    color: goldenrod;
+}
+.member-modal .left-section{
+    background-color: rgb(17, 17, 17);
+    color: white;
+}
+.member-modal h2{
+    color: goldenrod;
+    font-weight: 500;
+    font-size: 30px;
+}
+.officer-card {
+    margin-top: 50px;
+    width: 400px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: goldenrod;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 1s ease-in-out, box-shadow 1s ease-in-out !important;
+    cursor: pointer;
+    overflow: hidden;
+    color: black;
+}
+.officer-card:hover {
+    transform: scale(1.05) !important;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+.officer-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: black;
+    font-weight: bolder;
+}
+.officer-card p {
+    font-size: 14px;
+    color: white;
+    padding: 0 15px;
+}
+.officer-card button{
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: black;
+    color: goldenrod;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+}
+.officer-card button:hover {
+    background: transparent;
+    color: black;
+}
+.officer-modal .left-section{
+    background-color: rgb(17, 17, 17);
+    color: white;
+}
+.officer-modal h2{
+    color: goldenrod;
+    font-weight: 500;
+    font-size: 30px;
+}
+@media (max-width: 1024px) { /*iPad Pro*/
+    .card-container {
+        gap: 70px;
+        margin-top: 55px;
+        margin-bottom: 100px;
+    }
+    .brand-text {
+        font-size: 12px;
+    }
+    .heading1 {
+        margin-top: 200px;
+    }
+}
+@media (max-width: 768px) { /*iPhone 12 Pro*/
+    .brand-text {
+        font-size: 7.5px;
+    }
+    .heading2 {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .card-container {
+        flex-direction: column !important;
+    }
+    .member-card,
+    .officer-card {
+        width: 85% !important;
+        text-align: center;
+    }
+    .member-card {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    .officer-card {
+        margin-top: 0;
+        padding-top: 0;
+    }
+    .modal-dialog {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: auto;
+        padding:5vh 0;
+    }
+    .modal-content {
+        width: 85%;
+        max-height: 80vh;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        flex-direction: column;
+        overflow: hidden;
+    }
+    .modal-body {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+    }
+    .left-section, 
+    .right-section {
+        width: 100% !important;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .right-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        flex: 1;
+        padding: 10px;
+        position: relative;
+    }
+    .right-section h3 {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .right-section .btn-close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+}
+.footer {
+    margin-top: 100px;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.footer.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.footer-top {
+    background-color: black; 
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+}
+.footer-top .social-icon {
+    font-size: 24px;
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+.footer-top .social-icon:hover {
+    color: goldenrod;
+}
+.footer-bottom {
+    background-color: goldenrod; 
+    color: white;
+    padding: 10px 0;
+}
+.footer-bottom .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+.footer-logo {
+    max-width: 150px; 
+    margin-top: 15px;
+}
+@media (max-width: 768px) {
+    .footer-top {
+        padding: 20px 0;
+    }
+
+    .footer-top .social-icons {
+        margin-bottom: 15px;
+    }
+
+    .footer-top .social-icon {
+        font-size: 18px;
+        margin: 0 8px;
+    }
+
+    .footer-bottom .container {
+        flex-direction: column;
+        align-items: center;
+        font-size: 12px;
+    }
+
+    .footer-bottom .container span {
+        margin-bottom: 10px;
+    }
+
+    .footer-logo {
+        max-width: 120px;
+        margin-top: 20px;
+    }
+
+    .footer-top p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .footer-top .social-icons {
+        margin-bottom: 20px;
+    }
+
+    .footer-top .social-icon {
+        font-size: 22px;
+    }
+
+    .footer-bottom .container {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .footer-top .social-icon {
+        font-size: 28px;
+    }
+
+    .footer-bottom .container {
+        font-size: 16px;
+    }
+}
+.icon-large {
+    font-size: 60px; /* Adjust size as needed */
+    margin-bottom: 10px;
+}
+.left-section {
+  width: 40%;
+  text-align: center;
+}
+.right-section {
+  width: 60%;
+  background-color: white;
+  color: rgb(48, 48, 48);
+}
+.right-section h3{
+    margin-bottom: 20px;
+}
+.right-section input{
+    border-radius: 5px;
+}
+.right-section label {
+    color: rgb(66, 66, 66);
+}
+.right-section input::placeholder {
+    color: rgb(168, 168, 168);
+}
+.right-section option {
+    color: black;
+}
+.right-section .text-center {
+    font-weight: bold;
+}
+.btn-primary {
+    background-color: goldenrod;
+    border: none;
+    color: black;
+}
+.btn-primary:hover {
+    background-color: black; 
+    border: none;
+    color: goldenrod;
+}
+.regis .modal-content{
+    border-radius: 5px;
+    overflow: hidden;
+}
+.regis .right-section{
+    background-color: white;
+    color: rgb(48, 48, 48);
+}
+.regis a{
+    background-color: goldenrod;
+    color: black;
+}
+.regis h3{
+    font-weight: bolder;
+}
+.regis .btn-secondary{
+    background-color: transparent;
+    border: none;
+    color: black;
+}
+.regis .btn-secondary:hover{
+    background-color: transparent;
+    border: none;
+    color: goldenrod;
+    text-decoration: underline;
+}
+.member-modal .modal-content{
+    border-radius: 5px;
+    overflow: hidden;
+}
+.officer-modal .modal-content{
+    border-radius: 5px;
+    overflow: hidden;
+}
+  </style>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-body-tertiary fixed-top w-100">
+        <div class="container-fluid d-flex align-items-center justify-content-between">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/APD.png" alt="Logo" width="50" height="50" class="logo">
+                <span class="brand-text ms-2">ASSEMBLAGE OF PROGRAMMERS AND DEVELOPERS</span>
+            </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="announcement.html">Announcement</a></li>
+                    <li class="nav-item"><a class="nav-link" href="maintenance.html">Merchandise</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="joinus.html">Join Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <h1 class="heading1">Want to be part of our organization?</h1>
+    <h2 class="heading2">Join us as we create, inspire, and lead the next generation of programmers and developers in shaping the future of technology.</h2>
+    <div class="card-container">
+        <!-- Member Card -->
+        <div class="member-card">
+            <i class="bi bi-people-fill icon-large"></i>
+            <h3>Become a Member</h3>
+            <p>Join our growing community of programmers and developers to collaborate and innovate.</p>
+            <button class="btn-custom" data-bs-toggle="modal" data-bs-target="#memberModal">Join Now</button>
+        </div>
+    
+        <!-- Officer Card -->
+        <div class="officer-card">
+            <i class="bi bi-person-fill icon-large"></i>
+            <h3>Apply as an Officer</h3>
+            <p>Lead, organize, and make an impact by becoming an officer in our organization.</p>
+            <button class="btn-custom" data-bs-toggle="modal" data-bs-target="#officerModal">Apply Now</button>
+        </div>
+    </div>
+
+    
+    <!-- Member Modal -->
+     <div class="member-modal">
+        <div class="modal fade" id="memberModal" tabindex="-1" aria-labelledby="memberModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                <div class="modal-body d-flex p-0">
+                  
+                  <div class="left-section p-4 text-white d-flex flex-column justify-content-center align-items-center">
+                    <h2>Become a Member</h2>
+                    <p>Join our community and unlock exclusive opportunities!</p>
+                    <img src="images/APD.png" alt="Logo" class="img-fluid mt-3" style="max-width: 100px;">
+                  </div>
+          
+                  <div class="right-section p-4 flex-grow-1">
+                    <button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h3 class="text-center">Student Information</h3>
+                    <form class="row g-3 needs-validation" novalidate>
+                        <div class="col-md-6">
+                            <label for="inputFirstName" class="form-label">First Name</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="bi bi-person"></i></span>
+                                <input type="text" class="form-control" id="inputFirstName" placeholder="Juan" required>
+                                <div class="invalid-feedback">Please enter your first name.</div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <label for="inputLastName" class="form-label">Last Name</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="bi bi-person"></i></span>
+                                <input type="text" class="form-control" id="inputLastName" placeholder="Dela Cruz" required>
+                                <div class="invalid-feedback">Please enter your last name.</div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-12">
+                            <label for="inputEmail" class="form-label">Email Address</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                                <input type="email" class="form-control" id="inputEmail" placeholder="2023@feudiliman.edu.ph" required>
+                                <div class="invalid-feedback">Please enter a valid email address.</div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-12">
+                            <label for="inputPhone" class="form-label">Phone Number</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="bi bi-telephone"></i></span>
+                                <input type="tel" class="form-control" id="inputPhone" placeholder="Enter your phone number" pattern="[0-9]{11}" required>
+                                <div class="invalid-feedback">Please enter a valid 11-digit phone number.</div>
+                            </div>
+                        </div>
+                    
+                        <div class="col-md-12">
+                            <label for="inputStudentNumber" class="form-label">Student Number</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="bi bi-person-badge"></i></span>
+                                <input type="text" class="form-control" id="inputStudentNumber" placeholder="202312345" pattern="[0-9]{9}" required>
+                                <div class="invalid-feedback">Student number must be exactly 9 digits.</div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-8">
+                            <label for="inputProgram" class="form-label">Program</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="bi bi-book"></i></span>
+                                <select id="inputProgram" class="form-select" required>
+                                    <option value="" selected disabled>Select a program</option>
+                                    <option>BSIT - AGD</option>
+                                    <option>BSIT - WMA</option>
+                                    <option>BSIT - CBS</option>
+                                    <option>BSCS</option>
+                                </select>
+                                <div class="invalid-feedback">Please select a program.</div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <label for="inputYear" class="form-label">Year</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="bi bi-calendar"></i></span>
+                                <select id="inputYear" class="form-select" required>
+                                    <option value="" selected disabled>Select year</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                                <div class="invalid-feedback">Please select your year level.</div>
+                            </div>
+                        </div>
+                    
+                        <div class="applybtn">
+                            <button type="button" class="btn btn-primary w-100" id="memberNextButton">Next</button>
+                        </div>
+                    </form>
+                    
+                  </div>
+          
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <!-- Officer Modal -->
+   <div class="officer-modal">
+    <div class="modal fade" id="officerModal" tabindex="-1" aria-labelledby="officerModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+            <div class="modal-body d-flex p-0">
+              
+              <div class="left-section p-4 text-white d-flex flex-column justify-content-center align-items-center">
+                <h2>Apply as an Officer</h2>
+                <p>Take on a leadership role and shape our community’s future!</p>
+                <img src="images/APD.png" alt="Logo" class="img-fluid mt-3" style="max-width: 100px;">
+              </div>
+      
+              <div class="right-section p-4 flex-grow-1">
+                <button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h3 class="text-center">Student Information</h3>
+                <form class="row g-3 needs-validation" novalidate>
+                    <div class="col-md-6">
+                        <label for="inputFirstName" class="form-label">First Name</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-person"></i></span>
+                            <input type="text" class="form-control" id="inputFirstName" placeholder="Juan" required>
+                            <div class="invalid-feedback">Please enter your first name.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <label for="inputLastName" class="form-label">Last Name</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-person"></i></span>
+                            <input type="text" class="form-control" id="inputLastName" placeholder="Dela Cruz" required>
+                            <div class="invalid-feedback">Please enter your last name.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-12">
+                        <label for="inputEmail" class="form-label">Email Address</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                            <input type="email" class="form-control" id="inputEmail" placeholder="2023@feudiliman.edu.ph" required>
+                            <div class="invalid-feedback">Please enter a valid email address.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-12">
+                        <label for="inputPhone" class="form-label">Phone Number</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-telephone"></i></span>
+                            <input type="tel" class="form-control" id="inputPhone" placeholder="Enter your phone number" pattern="[0-9]{11}" required>
+                            <div class="invalid-feedback">Please enter a valid 11-digit phone number.</div>
+                        </div>
+                    </div>
+                
+                    <div class="col-md-6">
+                        <label for="inputStudentNumber" class="form-label">Student Number</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-person-badge"></i></span>
+                            <input type="text" class="form-control" id="inputStudentNumber" placeholder="202312345" pattern="[0-9]{9}" required>
+                            <div class="invalid-feedback">Student number must be exactly 9 digits.</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputProgram" class="form-label">Position</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-briefcase"></i></span>
+                            <select id="inputProgram" class="form-select" required>
+                                <option value="" selected disabled>Select a position</option>
+                                <option>President</option>
+                                <option>Vice President (Internal)</option>
+                                <option>Vice President (External)</option>
+                                <option>Secretary</option>
+                                <option>Treasurer</option>
+                                <option>Auditor</option>
+                                <option>Public Relations Officer</option>
+                                <option>Academic Director (Outreach, Creatives, Events, Sports)</option>
+                                <option>Non-Academic Director (Outreach, Creatives, Events)</option>
+                            </select>
+                            <div class="invalid-feedback">Please select a program.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-8">
+                        <label for="inputProgram" class="form-label">Program</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-book"></i></span>
+                            <select id="inputProgram" class="form-select" required>
+                                <option value="" selected disabled>Select a program</option>
+                                <option>BSIT - AGD</option>
+                                <option>BSIT - WMA</option>
+                                <option>BSIT - CBS</option>
+                                <option>BSCS</option>
+                            </select>
+                            <div class="invalid-feedback">Please select a program.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <label for="inputYear" class="form-label">Year</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-calendar"></i></span>
+                            <select id="inputYear" class="form-select" required>
+                                <option value="" selected disabled>Select year</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                            <div class="invalid-feedback">Please select your year level.</div>
+                        </div>
+                    </div>
+
+                    <div class="applybtn">
+                        <button type="button" class="btn btn-primary w-100" id="officerNextButton">Next</button>
+                    </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+   </div>
+
+   <div class="regis">
+    <div class="modal fade" id="secondModal" tabindex="-1" aria-labelledby="secondModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body d-flex p-0">
+                    
+                    <div class="left-section">
+                        <img src="images/process.jpg" alt="Image" class="img-fluid h-100 w-100">
+                    </div>
+    
+                    <div class="right-section p-4 flex-grow-1 text-center">
+                        <button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h3>Scan to Register</h3>
+                        <img src="images/qr.jpg" alt="QR Code" class="img-fluid my-3" style="max-width: 200px;">
+                        <p>Or click the link below to register:</p>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe5e4gjaUIkhd0eyecJ0AUJ1m_ghvhU94H8A2hoa-AYcKvFXw/viewform" class="btn btn-primary" target="_blank">Register Here</a>
+                        <br><br>
+                        <button type="button" class="btn btn-secondary" id="backToPreviousModal">Back</button>
+
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <footer class="footer">
+      <div class="footer-top">
+          <div class="container text-center">
+              <div class="social-icons">
+                <a href="https://www.facebook.com/FEUD.APD" class="social-icon"><i class="bi bi-facebook"></i></a>
+                <a href="maintenance.html" class="social-icon"><i class="bi bi-instagram"></i></a>
+                <a href="maintenance.html" class="social-icon"><i class="bi bi-twitter"></i></a>
+              </div>
+              <p>Sampaguita Avenue, Mapayapa Village III, Pasong Tamo • Quezon City 1101 • Philippines</p>
+              <p><i class="fas fa-phone"></i> +63-906-407-6850 &nbsp; <i class="fas fa-envelope"></i> admissions@feudiliman.edu.ph</p>
+              
+              <img src="images/APD.png" alt="Company Logo" class="footer-logo">
+          </div>
+      </div>
+      
+      <div class="footer-bottom">
+          <div class="container d-flex justify-content-between">
+              <span>Copyright @APD 2025</span>
+              <span>Powered by - <a href="https://github.com/" class="text-white">GitHub</a></span>
+          </div>
+      </div>
+  </footer>
+  
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const footer = document.querySelector(".footer");
+
+    function checkFooterVisibility() {
+        if (!footer) return;
+
+        const footerPosition = footer.getBoundingClientRect().top;
+        const screenHeight = window.innerHeight;
+
+        if (footerPosition < screenHeight) {
+            footer.classList.add("visible");
+        } else {
+            footer.classList.remove("visible");
+        }
+    }
+
+    window.addEventListener("scroll", checkFooterVisibility);
+    checkFooterVisibility(); 
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    let previousModal = null;
+    let formData = {}; 
+
+    function saveFormData(modalId) {
+        formData = {};
+        document.querySelectorAll(`#${modalId} input, #${modalId} select`).forEach(input => {
+            formData[input.id] = input.value;
+        });
+    }
+
+    function restoreFormData(modalId) {
+        document.querySelectorAll(`#${modalId} input, #${modalId} select`).forEach(input => {
+            if (formData[input.id]) {
+                input.value = formData[input.id];
+            }
+        });
+    }
+
+    function cleanupModal() {
+        document.body.classList.remove("modal-open");
+        document.body.style.overflow = "";
+        document.querySelectorAll(".modal-backdrop").forEach(backdrop => backdrop.remove());
+    }
+
+    function validateForm(modalId) {
+        let form = document.querySelector(`#${modalId} form`);
+        if (!form.checkValidity()) {
+            form.classList.add("was-validated");
+            return false; 
+        }
+        return true;
+    }
+
+    function resetValidation(modalId) {
+        let form = document.querySelector(`#${modalId} form`);
+        form.classList.remove("was-validated");
+    }
+
+    function openModal(currentModalId, nextModalId) {
+        const currentModalElement = document.getElementById(currentModalId);
+        const nextModal = new bootstrap.Modal(document.getElementById(nextModalId));
+
+        currentModalElement.addEventListener("hidden.bs.modal", function () {
+            nextModal.show();
+        }, { once: true });
+
+        let currentModal = bootstrap.Modal.getInstance(currentModalElement);
+        if (currentModal) currentModal.hide();
+    }
+
+    document.getElementById("memberNextButton").addEventListener("click", function () {
+        let modalId = "memberModal";
+        if (validateForm(modalId)) {
+            previousModal = modalId;
+            saveFormData(modalId);
+            openModal(modalId, "secondModal");
+        }
+    });
+
+    document.getElementById("officerNextButton").addEventListener("click", function () {
+        let modalId = "officerModal";
+        if (validateForm(modalId)) {
+            previousModal = modalId;
+            saveFormData(modalId);
+            openModal(modalId, "secondModal");
+        }
+    });
+
+    document.getElementById("backToPreviousModal").addEventListener("click", function () {
+        if (previousModal) {
+            let currentModal = bootstrap.Modal.getInstance(document.getElementById("secondModal"));
+            if (currentModal) currentModal.hide();
+
+            setTimeout(() => {
+                restoreFormData(previousModal);
+                resetValidation(previousModal);
+                new bootstrap.Modal(document.getElementById(previousModal)).show();
+            }, 500);
+        }
+    });
+
+    document.querySelectorAll(".modal").forEach(modal => {
+        modal.addEventListener("hidden.bs.modal", cleanupModal);
+    });
+
+    cleanupModal();
+});
+</script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,865 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>APD - Announcement</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="icon" type="image/png" href="images/APD.png">
+  </head>
+  <style>
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-image: url(images/background.jfif); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+.navbar {
+    padding: 0; 
+    margin: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    animation: slideDown 0.8s ease-out;
+    background-color: black;
+    height: 100px;
+    line-height: 50px; 
+}
+.navbar-brand {
+    padding: 0; 
+    margin: 0;
+}
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.brand-container {
+    display: flex; 
+    align-items: center;
+    gap: 15px; 
+}
+.logo {
+    width: 80px;
+    height: 70px;
+}
+.brand-text {
+    color: goldenrod !important; 
+    cursor: default;
+    font-size: 15px;
+    font-weight: bold;
+    font-family:'Orbitron', sans-serif;
+    font-style: italic;
+    text-transform: uppercase; 
+    white-space: nowrap; 
+}
+.nav-link {
+    background-color: black;
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 10px 15px;
+    text-transform: uppercase;
+}
+.nav-link:hover {
+    background-color: goldenrod;
+    border-radius: 5px;
+    color: black;
+}
+.container-fluid {
+    background-color: black;
+    padding: 15px 10px;
+}
+ul.nav {
+    margin: 0;
+    padding: 0;
+}
+.navbar-toggler {
+    border: none;
+    outline: none;
+}
+@media (max-width: 991px) {
+    .navbar {
+        padding: 0; 
+    }
+    .navbar .container-fluid {
+        flex-wrap: nowrap;
+        padding: 25px 20px;
+    }
+    .navbar-brand {
+        flex-grow: 1;
+        max-width: 85%; 
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .brand-text {
+        font-size: 9px; 
+    }
+    .logo {
+    width: 50px; 
+    height: 40px;
+    padding-right: 0;
+    margin-right: 0;
+}
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: black;
+        text-align: left;
+        padding: 10px 0;
+        border-top: 1px solid goldenrod;
+    }
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+    }
+
+    .nav-item {
+        padding: 10px 0;
+    }
+
+    .nav-link {
+        width: 100%;
+        text-align: left;
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+}
+.carousel {
+  margin-top: 110px; 
+  margin-bottom: 70px;
+  animation: slideFromTop 1s ease-out;
+}
+.carousel-item img {
+  width: 100%;
+  height: 400px; 
+  object-fit: cover;
+}
+.carousel-caption h5{
+    font-size: 40px;
+    font-weight: 700;
+}
+.carousel-caption p{
+    font-size: 15px;
+}
+@keyframes slideFromTop {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.carousel-inner .carousel-item {
+    transition: none !important; 
+}
+.container{
+    margin-left:10.5%;
+}
+.card{
+  height: 450px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(21, 21, 21);
+  position: relative;
+  text-align: left;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 1.0);
+}
+.card:hover{
+  transform: scale(1.1);
+  box-shadow: 8px 15px 25px rgba(0, 0, 0, 1.2); 
+  z-index: 10;
+}
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.card-body{
+  background-color: rgb(27, 27, 27);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  padding: 15px;
+}
+.card-img-top {
+  width: 100%;
+  object-fit: cover; 
+  height: 45%;
+  position: relative;
+}
+.card-img-top::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%; 
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(21, 21, 21) 100%);
+}
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.card:hover .card-overlay {
+    opacity: 1;
+}
+.card-title{
+    font-size: 20px; 
+    font-weight: bold;
+    margin-top: 0; 
+    margin-bottom: 30px !important;
+    color: white;
+}
+.time-label {
+    font-size: 15px;
+    margin-top: 8px !important;
+    margin-bottom: 3px !important; 
+    color: goldenrod;
+    display: block;
+    font-weight: 400;
+}
+.card-text {
+    font-size: 14px;
+    color: gray;
+    display: block;
+}
+.btn-custom {
+  background-color: transparent !important; 
+  color: white;
+    padding: 8px 16px;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.btn-custom:hover {
+    background-color: white !important; 
+    color: black !important;
+}
+.modal-header {
+    padding: 0; 
+    border: none; 
+}
+.modal-content {
+    padding: 0;
+    margin: 0;
+    text-align: justify;
+}
+.modal-content h5{
+  font-weight: bold;
+  text-align: left; 
+}
+.modal-body {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    gap: 20px; 
+    padding: 20px; 
+    background-color: white;
+    color: rgb(48, 48, 48);
+    border-radius: 5px;
+}
+.modal-body img {
+    max-width: 100%; 
+    height: auto;
+    border-radius: 5px !important;
+}
+.modal-body h5{
+    font-size: 30px;
+}
+.modal-dialog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; 
+}
+.text-end button{
+  background-color: goldenrod !important;
+  color: white;
+  text-align: center;
+  background-color: transparent;
+  width: 110px;
+  margin-top: 40px;
+  margin-right: 125px;
+  border-radius: 5px;
+  border: none;
+}
+.text-end button:hover{
+background-color: black !important;
+color: white !important;
+border: none;
+}
+@media (max-width: 1024px) { /*iPad Pro*/
+    .container {
+        max-width: 1000px;
+        margin: 0 10px;
+    }
+    .brand-text {
+        font-size: 12px;
+    }
+}
+@media (max-width: 768px) { /*iPhone 12 Pro*/
+    .brand-text {
+        font-size: 7.5px;
+    }
+    .row {
+        justify-content: center !important;
+    }
+    .col {
+        display: flex;
+        justify-content: center;
+    }
+    .container {
+        margin-left: -2px;
+    }
+    .modal-body {
+        flex-direction: column !important;
+        text-align: center;
+    }
+    .modal-body img {
+        max-width: 100%;
+        height: auto;
+    }
+    .modal-body .ms-4 {
+        margin-left: 0 !important;
+        margin-top: 20px; 
+    }
+    .modal-dialog {
+        max-width: 95% !important;
+    }
+    .modal-content {
+        margin-top: -100px !important;
+    }
+    .text-end {
+        text-align: center !important;
+    }
+    .text-end button {
+        margin-right: 0 !important;
+        width: 100px;
+    }
+}
+.footer {
+    margin-top: 100px;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.footer.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.footer-top {
+    background-color: black; 
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+}
+.footer-top .social-icon {
+    font-size: 24px;
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+.footer-top .social-icon:hover {
+    color: goldenrod;
+}
+.footer-bottom {
+    background-color: goldenrod; 
+    color: white;
+    padding: 10px 0;
+}
+.footer-bottom .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+.footer-logo {
+    max-width: 150px; 
+    margin-top: 15px;
+}
+@media (max-width: 768px) {
+    .footer-top {
+        padding: 20px 0;
+    }
+
+    .footer-top .social-icons {
+        margin-bottom: 15px;
+    }
+
+    .footer-top .social-icon {
+        font-size: 18px;
+        margin: 0 8px;
+    }
+
+    .footer-bottom .container {
+        flex-direction: column;
+        align-items: center;
+        font-size: 12px;
+    }
+
+    .footer-bottom .container span {
+        margin-bottom: 10px;
+    }
+
+    .footer-logo {
+        max-width: 120px;
+        margin-top: 20px;
+    }
+
+    .footer-top p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .footer-top .social-icons {
+        margin-bottom: 20px;
+    }
+
+    .footer-top .social-icon {
+        font-size: 22px;
+    }
+
+    .footer-bottom .container {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .footer-top .social-icon {
+        font-size: 28px;
+    }
+
+    .footer-bottom .container {
+        font-size: 16px;
+    }
+}
+
+.animated-heading h1{
+    font-size: 25px;
+    font-weight: bold;
+    color: goldenrod;
+    margin-left: 8%;
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slideInLeft 1s ease-out forwards;
+}
+.animated-heading h2{
+  font-size: 15px;
+  color: white;
+  margin-bottom: 110px;
+  margin-left: 8%;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideInLeft 1s ease-out forwards;
+}
+.row {
+  --bs-gutter-x: 0 !important; 
+  --bs-gutter-y: 50px;
+}
+.custom-line {
+    width: 100%;
+    height: 1px;
+    background-color: #646464; 
+    margin: 10px 0;
+}
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+  </style>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-body-tertiary fixed-top w-100">
+        <div class="container-fluid d-flex align-items-center justify-content-between">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/APD.png" alt="Logo" width="50" height="50" class="logo">
+                <span class="brand-text ms-2">ASSEMBLAGE OF PROGRAMMERS AND DEVELOPERS</span>
+            </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="announcement.html">Announcement</a></li>
+                    <li class="nav-item"><a class="nav-link" href="maintenance.html">Merchandise</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="joinus.html">Join Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="3000">
+            <img src="images/geeky.jpg" class="d-block w-100" alt="First Slide">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Happening Now!</h5>
+              <p>Geeky Gateway: Enter the world of IT</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="images/membership.jpg" class="d-block w-100" alt="Second Slide">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>We Are Now Accepting!</h5>
+              <p>APD is now accepting membership applications</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="images/certification.jpg" class="d-block w-100" alt="Third Slide">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>IT Certification Examination</h5>
+              <p>Important dates to remember</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <div class="animated-heading">
+      <h1>| Upcoming Events and Projects</h1>
+      <h2>Building a Stronger Tech Community, One Line of Code at a Time</h2>
+      </div>
+      
+      <div class="container my-4">
+        <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center text-center">
+    
+            <!-- Card 1 -->
+            <div class="col">
+                <div class="card">
+                    <img src="images/movie.jpg" class="card-img-top" alt="Movie Event">
+                    <div class="card-body">
+                        <p class="time-label">February 2025</p>
+                        <p class="card-title">Movie Booth</p>
+                        <p class="card-text">Join us at APD’s booth this Foundation Week and enjoy a lineup of exciting movies! Free popcorn included.</p>
+                    </div>
+                    <div class="card-overlay">
+                        <button type="button" class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#modal1">View</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal 1 -->
+            <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-body d-flex align-items-center">
+                            <div style="flex: 1;">
+                                <img src="images/movie.jpg" class="img-fluid rounded" alt="Movie Event">
+                            </div>
+                            <div class="ms-4" style="flex: 1;">
+                                <h5>APD’s Movie Booth</h5>
+                                <div class="custom-line"></div>
+                                <p>Experience the ultimate movie escape at APD's Movie Booth during Foundation Week! Enjoy a lineup of exciting films, relax with friends, and immerse yourself in the world of cinema. Grab some snacks and join the fun!"
+                                </p>
+                                <div class="custom-line"></div>
+                                <div class="text-end mt-3">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Back</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Card 2 -->
+            <div class="col">
+                <div class="card">
+                    <img src="images/code quest.jpg" class="card-img-top" alt="Movie Event">
+                    <div class="card-body">
+                        <p class="time-label">April 2025</p>
+                        <p class="card-title">Code Quest</p>
+                        <p class="card-text">Join Code Quest: Final Edition—a weekly challenge to sharpen skills, celebrate progress, and prepare for the future!</p>
+                    </div>
+                    <div class="card-overlay">
+                        <button type="button" class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#modal2">View</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal 2 -->
+            <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-body d-flex align-items-center">
+                            <div style="flex: 1;">
+                                <img src="images/code quest.jpg" class="img-fluid rounded" alt="Future Foundation">
+                            </div>
+                            <div class="ms-4" style="flex: 1;">
+                                <h5>Code Quest: Weekly Challenge</h5>
+                                <div class="custom-line"></div>
+                                <p>Code Quest: Final Edition is a weekly coding challenge running until April 2025, designed to consolidate technical knowledge, celebrate achievements, and prepare for future challenges—all without a set budget.
+                                </p>
+                                <div class="custom-line"></div>
+                                <div class="text-end mt-3">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Back</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Card 3 -->
+            <div class="col">
+                <div class="card">
+                    <img src="images/event1.jpg" class="card-img-top" alt="Movie Event">
+                    <div class="card-body">
+                        <p class="time-label">April 2025</p>
+                        <p class="card-title">Malware! Be Aware!</p>
+                        <p class="card-text">Join Malware! Be Aware!—a program to boost cybersecurity skills, raise awareness, and empower through hands-on training!</p>
+                    </div>
+                    <div class="card-overlay">
+                        <button type="button" class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#modal3">View</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal 3 -->
+            <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modal3Label" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-body d-flex align-items-center">
+                            <div style="flex: 1;">
+                                <img src="images/event1.jpg" class="img-fluid rounded" alt="IT Career">
+                            </div>
+                            <div class="ms-4" style="flex: 1;">
+                                <h5>Malware! Be Aware!</h5>
+                                <div class="custom-line"></div>
+                                <p>Malware! Be Aware! is a cybersecurity initiative running until April 2025, aimed at enhancing computer literacy, raising awareness of threats, and providing hands-on training—all with no budget required.</p>
+                                <div class="custom-line"></div>
+                                <div class="text-end mt-3">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Back</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Card 4 -->
+            <div class="col">
+                <div class="card">
+                    <img src="images/careers.jpg" class="card-img-top" alt="Movie Event">
+                    <div class="card-body">
+                        <p class="time-label">May 2025</p>
+                        <p class="card-title">Beyond Code</p>
+                        <p class="card-text">Join Beyond Code—discover IT career paths, gain industry insights, and make informed career choices!</p>
+                    </div>
+                    <div class="card-overlay">
+                        <button type="button" class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#modal4">View</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal 4 -->
+            <div class="modal fade" id="modal4" tabindex="-1" aria-labelledby="modal4Label" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-body d-flex align-items-center">
+                            <div style="flex: 1;">
+                                <img src="images/careers.jpg" class="img-fluid rounded" alt="Pixel Perfect">
+                            </div>
+                            <div class="ms-4" style="flex: 1;">
+                                <h5>Beyond Code: Exploring IT Career Possibilities</h5>
+                                <div class="custom-line"></div>
+                                <p>Beyond Code: Exploring IT Career Possibilities is a program running until May 2025, designed to explore diverse IT career paths, provide industry insights, and guide career decision-making—all with no budget required.</p>
+                                <div class="custom-line"></div>
+                                <div class="text-end mt-3">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Back</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Card 5 -->
+            <div class="col">
+                <div class="card">
+                    <img src="images/pixel.jpg" class="card-img-top" alt="Movie Event">
+                    <div class="card-body">
+                        <p class="time-label">June 2025</p>
+                        <p class="card-title">Pixel Perfect</p>
+                        <p class="card-text">Join Pixel Perfect—celebrate APD pride through design, creativity, and community spirit!</p>
+                    </div>
+                    <div class="card-overlay">
+                        <button type="button" class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#modal5">View</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal 5 -->
+            <div class="modal fade" id="modal5" tabindex="-1" aria-labelledby="modal5Label" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-body d-flex align-items-center">
+                            <div style="flex: 1;">
+                                <img src="images/pixel.jpg" class="img-fluid rounded" alt="Malware Awareness">
+                            </div>
+                            <div class="ms-4" style="flex: 1;">
+                                <h5>Pixel Perfect: Expressing APD Pride Through Design</h5>
+                                <div class="custom-line"></div>
+                                <p>Pixel Perfect: Expressing APD Pride Through Design is a creative initiative running until June 2025, aimed at showcasing artistic talent, strengthening community spirit, and providing recognition—all with no budget required.</p>
+                                <div class="custom-line"></div>
+                                <div class="text-end mt-3">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Back</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="col">
+                <div class="card">
+                    <img src="images/welcome.jpg" class="card-img-top" alt="Movie Event">
+                    <div class="card-body">
+                        <p class="time-label">July 2025</p>
+                        <p class="card-title">Future Foundation</p>
+                        <p class="card-text">Join Future Foundation—celebrate progress, shape the future, and strengthen APD’s community!</p>
+                    </div>
+                    <div class="card-overlay">
+                        <button type="button" class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#modal6">View</button>
+                    </div>
+                </div>
+            </div>
+
+<!-- Modal 6 -->
+<div class="modal fade" id="modal6" tabindex="-1" aria-labelledby="modal6Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+          <div class="modal-body d-flex align-items-center">
+              <div style="flex: 1;">
+                  <img src="images/code quest.jpg" class="img-fluid rounded" alt="Cybersecurity">
+              </div>
+              <div class="ms-4" style="flex: 1;">
+                  <h5>Future Foundation: Building the Next APD</h5>
+                  <div class="custom-line"></div>
+                  <p>Future Foundation: Building the Next APD is a milestone initiative running until July 2025, dedicated to celebrating achievements, planning for the future, and strengthening community spirit—all with no budget required.</p>
+                  <div class="custom-line"></div>
+                  <div class="text-end mt-3">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Back</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+        </div>
+    </div>
+    
+    <footer class="footer">
+      <div class="footer-top">
+          <div class="container text-center">
+              <div class="social-icons">
+                <a href="https://www.facebook.com/FEUD.APD" class="social-icon"><i class="bi bi-facebook"></i></a>
+                <a href="maintenance.html" class="social-icon"><i class="bi bi-instagram"></i></a>
+                <a href="maintenance.html" class="social-icon"><i class="bi bi-twitter"></i></a>
+              </div>
+              <p>Sampaguita Avenue, Mapayapa Village III, Pasong Tamo • Quezon City 1101 • Philippines</p>
+              <p><i class="fas fa-phone"></i> +63-906-407-6850 &nbsp; <i class="fas fa-envelope"></i> admissions@feudiliman.edu.ph</p>
+              
+              <img src="images/APD.png" alt="Company Logo" class="footer-logo">
+          </div>
+      </div>
+      
+      <div class="footer-bottom">
+          <div class="container d-flex justify-content-between">
+              <span>Copyright @APD 2025</span>
+              <span>Powered by - <a href="https://github.com/" class="text-white">GitHub</a></span>
+          </div>
+      </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const footer = document.querySelector(".footer");
+
+    function checkFooterVisibility() {
+        const footerPosition = footer.getBoundingClientRect().top;
+        const screenHeight = window.innerHeight;
+
+        if (footerPosition < screenHeight - 50) {
+            footer.classList.add("visible");
+        }
+    }
+
+    window.addEventListener("scroll", checkFooterVisibility);
+    checkFooterVisibility(); 
+});
+
+    document.addEventListener("DOMContentLoaded", function () {
+    const cards = document.querySelectorAll(".card");
+
+    function revealCards() {
+        cards.forEach((card) => {
+            const cardPosition = card.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight - 50;
+
+            if (cardPosition < screenPosition) {
+                card.classList.add("show");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", revealCards);
+    revealCards(); 
+});
+
+  </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
